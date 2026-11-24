@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PulseLine — Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --surface: #0f1624;
+      --surface-elevated: #172136;
+      --border: #2b3b5e;
+      --text: #f3f6fc;
+      --muted: #a0aec8;
+      --accent: #00d2e6;
+      --gold: #f5b73b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: radial-gradient(circle at top right, #112240, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 32px 16px 64px;
+    }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(0, 210, 230, 0.14);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 12px 0 6px;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 16px;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: var(--accent);
+    }
+    p, li {
+      color: var(--muted);
+      margin: 0 0 10px;
+      font-size: 15px;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 28px;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <span class="badge">Official Privacy Policy</span>
+      <h1>PulseLine</h1>
+      <p class="meta">Effective Date: November 23, 2026 &middot; Support: In-App Safety &amp; Moderation Center</p>
+    </header>
+
+    <section class="card">
+      <h2>1. Information We Collect</h2>
+      <ul>
+        <li><strong>Google Account Identity:</strong> Display name and Google account email retrieved securely through Android Credential Manager and Firebase Authentication strictly for authentication and private account ownership.</li>
+        <li><strong>11-Digit Assigned Communication Number:</strong> Upon registration, PulseLine assigns each user a unique 11-digit number used to dial, call, or save contacts inside the app.</li>
+        <li><strong>Profile Customization (PFP &amp; Bio):</strong> Optional profile pictures selected via the zero-permission Android Photo Picker, avatar presets, bio text, and presence status (Online, Busy, Away, Offline). While you can change your own profile display name, other users store custom contact names locally in their private Saved Contacts list.</li>
+        <li><strong>Messages, Images, Reactions &amp; Call Signaling:</strong> Contacts saved by 11-digit number, 1:1 real-time messages, emoji reactions, shared chat images, and voice/video call session states stored in Cloud Firestore.</li>
+        <li><strong>Safety Reports &amp; Moderation Records:</strong> Reports submitted by users, warning counts, ban status, ban reasons, and moderation audit logs.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>2. Zero-Permission Media &amp; Foreground Call Permissions</h2>
+      <ul>
+        <li><strong>Photo Sharing &amp; Profile Pictures:</strong> PulseLine never requests broad storage permissions such as <code>READ_EXTERNAL_STORAGE</code> or <code>READ_MEDIA_IMAGES</code>. Profile photos and chat images are chosen solely through the system Android Photo Picker, scaled down locally, and synced only when sent or saved.</li>
+        <li><strong>Voice &amp; Video Calls:</strong> Microphone (<code>RECORD_AUDIO</code>) and Camera (<code>CAMERA</code>) permissions are requested at runtime strictly when you initiate or answer a voice or video call, and are never accessed when idle or in the background.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>3. Identity Protection &amp; Zero Credential Exposure</h2>
+      <ul>
+        <li><strong>No Identity or Credential Leaks:</strong> PulseLine never publishes or exposes user emails, account credentials, or personal owner identities in public pages, contact lookups, or chat headers. You can also mask your own email on your Profile screen at any time.</li>
+        <li><strong>Number-First Dialing &amp; Saved Contacts:</strong> When dialing or calling an unsaved 11-digit number, PulseLine displays only the 11-digit number without exposing the recipient's profile name until you choose to save them under a custom name in your Saved Contacts area.</li>
+        <li><strong>1:1 Conversations &amp; Calls:</strong> Cloud Firestore zero-trust security rules restrict message and call session access strictly to the two participants (and authorized moderation administrators when reviewing reported incidents).</li>
+        <li><strong>Owner Moderation Console:</strong> Strictly limited to authorized application owners and explicitly delegated co-owners to review 11-digit directory entries, real-time report history, warning counts, and manage account bans/unbans to keep the platform safe.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>4. Your Controls &amp; Rights</h2>
+      <p>
+        You may update your display name, bio, presence status, email-masking toggle, and profile picture at any time from the Profile tab, rename or delete saved contacts, mute or unmute calls, block contacts, and log out safely. Privacy and safety inquiries are handled exclusively through the in-app Safety &amp; Moderation Center.
+      </p>
+    </section>
+
+    <footer>
+      &copy; 2026 PulseLine. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>
